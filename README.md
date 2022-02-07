@@ -115,3 +115,20 @@ Unless required by applicable law or agreed to in writing, software distributed 
 ## Contributors
 
 Isaac Aymerich (isaac.aymerich@gmail.com)
+  
+  
+我用这个才能新建docker:
+```
+sudo docker run --interactive \
+--name xpenology \
+--volume xpenology_data:/image \
+--publish 5000:5000 \
+--env THREADS=1 \
+--env CORES=2 \
+--env MEMORY=2048 \
+--env DISK_SIZE=10G \
+--env AUTO_ATTACH=Y \
+--privileged \
+segator/xpenology:latest
+```
+  from:[http://www.gebi1.com/thread-295338-1-1.html](http://www.gebi1.com/thread-295338-1-1.html)
